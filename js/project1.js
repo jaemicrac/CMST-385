@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.querySelector('.selector-examples li:nth-child(4)').classList.add('highlighter');
 
+        document.querySelector('.selector-examples li:nth-child(5)').classList.add('highlighter');
+
         document.querySelector('.selector-examples li:last-child').classList.add('last');
 
        
