@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     --------------------------------------------------
     */
 
+ // TODO: Add remaining selectors using nth-child, loops and conditional logic where approriate. (https://www.w3schools.com/CSSref/sel_nth-child.php) 
+
    document.querySelector("#add-classes").addEventListener('click', () => {
         document.querySelector('.selector-examples li:first-child').classList.add('first');
         document.querySelectorAll('.selector-examples li:nth-child(even)').forEach(el => el.classList.add('even'));
@@ -52,15 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.selector-examples li:nth-child(5)').classList.add('highlighter');
         document.querySelector('.selector-examples li:last-child').classList.add('last');
     });
- // TODO: Add remaining selectors using nth-child, loops and conditional logic where approriate. (https://www.w3schools.com/CSSref/sel_nth-child.php) 
        
-    });
 
     /* PART 3: REPLACEMENT TEXT
     --------------------------------------------------
     */
 
     document.querySelector("#change-language").addEventListener('click', () => {
+        const inputValue = document.querySelector('#newLanguage').value;
+        const elements = document.querySelectorAll('.currentLanguage');
+        elements.forEach(el => el.innerHTML = inputValue);
+        
         // TODO: Add code to change the text of the currentLanguage class to the value of the newLanguage ID:
         // - 1: Create a new variable called inputValue and set it to the value of the #newLanguage id
         // - 2: Create a new variable called element and set it to the .currentLanguage class
@@ -78,8 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll(".box").forEach(box => {
             const currentColor = window.getComputedStyle(box).backgroundColor;
             if (currentColor === boxColor) {
+                box.style.backgroundColor = 'white';
                 // TODO: element backgroundColor currently has boxColor set, change it to 'white'
             } else {
+                box.style.backgroundColor = boxColor;
                 // TODO: element backgroundColor currently does not have boxcolor set, set it to boxColor
             }
         });
@@ -88,6 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Adding/Removing classes to manipulate shapes
     document.querySelector("#button_toggle_roundedges").addEventListener('click', () => {
         document.querySelectorAll(".box").forEach(box => {
+            box.classList.toggle('round-edge');
             // TODO: Add a toggle to box.classList and toggle the CSS 'round-edge' class
         });
-    });
+     });
+ });
