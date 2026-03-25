@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         messageElement.textContent = message;
         messageDisplayArea.appendChild(messageElement);
     };
+    
     // Call the introduction function. Do not edit this line.
     introduction(name, age, isStudent);
 
