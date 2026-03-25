@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
  
         document.querySelectorAll('.selector-examples li:nth-child(even)').forEach(el => el.classList.add('even'));
         document.querySelector('.selector-examples li:nth-child(4)').classList.add('highlighter');
-        document.querySelector('.selector-examples li:nth-child(5)').classList.add(highlighter');
+        document.querySelector('.selector-examples li:nth-child(5)').classList.add('highlighter');
         document.querySelector('.selector-examples li:last-child').classList.add('last');
     });
 
